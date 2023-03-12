@@ -1,0 +1,71 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+:root
+  --navbar-height: 64px
+
+@layer base
+  h1
+    @apply mb-8 text-5xl tracking-widest font-bold
+
+  h2
+    @apply mt-5 mb-4 text-3xl tracking-wide font-medium
+
+  h3
+    @apply mb-4 text-2xl tracking-wide font-medium
+
+  h4
+    @apply mb-4 text-xl tracking-wider font-extrabold
+
+  p
+    @apply mb-2
+
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea
+    @apply block w-full px-4 py-2 rounded bg-transparent border border-2 focus:border-emerald-400 focus:outline-none
+
+  .admin-route
+    main
+      height: calc(100vh - (64px))
+      @apply overflow-auto
+
+  main
+    min-height: calc(100vh - (277px))
+    @apply flex flex-col
+
+    .container
+      @apply py-8
+
+  .container
+    @apply py-4
+
+  svg.stroke-white
+    path
+      stroke: white
+
+@layer components
+  .btn
+    @apply inline-block px-5 py-2 font-medium rounded shadow transition-colors
+
+  .btn--primary
+    @apply bg-purple-800 text-white hover:bg-purple-600 focus:bg-purple-600
+
+  .btn--secondary
+    @apply bg-yellow-700 text-white hover:bg-yellow-600 focus:bg-yellow-600
+
+  .btn--danger
+    @apply bg-red-800 text-white hover:bg-red-600 focus:bg-red-600
+
+  .btn--success
+    @apply bg-green-700 text-white hover:bg-green-600 focus:bg-green-600
+
+@layer utilities
+  .pt-navbar
+    padding-top: var(--navbar-height)
+
+.swiper-wrapper
+  transition-timing-function: linear
+  align-items: stretch
+
+.apexcharts-tooltip span
