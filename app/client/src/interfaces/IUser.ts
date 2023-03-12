@@ -4,4 +4,6 @@ export interface IUser {
   email: string
   avatar?: string
   isAdmin: boolean
+  device?: 'mobile' | 'desktop'
+  country?: string
 }

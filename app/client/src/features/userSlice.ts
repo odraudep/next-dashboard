@@ -3,11 +3,10 @@ import { IUser } from '@/interfaces/IUser'
 
 const initialState = {
   data: {
-    firstName: 'Ling',
+    firstName: 'Eduardo',
     lastName: 'Pinheiro',
-    email: 'ling.pinheiro@email.com',
-    avatar:
-      'https://petz.com.br/blog/wp-content/uploads/2020/08/calopsita-no-cio.jpg',
+    email: 'eduardo@email.com',
+    avatar: 'https://github.com/odraudep.png',
     isAdmin: true,
   } as IUser,
   isLogged: true,
