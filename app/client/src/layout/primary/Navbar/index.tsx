@@ -36,11 +36,11 @@ export default function Navbar() {
             {!isLogged ? (
               <ul className="flex gap-2">
                 <li>
-                  <Button to="/login">Sign In</Button>
+                  <Button to="/user/login">Sign In</Button>
                 </li>
 
                 <li>
-                  <Button variant="secondary" to="/signup">
+                  <Button variant="secondary" to="/user/signup">
                     Sign Up
                   </Button>
                 </li>

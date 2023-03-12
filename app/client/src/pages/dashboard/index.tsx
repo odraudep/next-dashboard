@@ -14,35 +14,71 @@ export default function Dashboard() {
       <div className="container">
         <h1>Overview</h1>
 
-        <div className="flex gap-8 text-white">
-          <Chart
-            settings={{
-              width: 380,
-              type: 'donut',
-              series: [44, 55, 13, 43, 22],
-              options: {
-                chart: {
-                  width: 380,
-                  foreColor: '#fff',
-                },
-                labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-                responsive: [
-                  {
-                    breakpoint: 480,
-                    options: {
-                      chart: {
-                        width: 200,
-                      },
-                      legend: {
-                        position: 'bottom',
+        <ul className="flex gap-8">
+          <li className="p-2 rounded shadow-lg">
+            <h2>Users device</h2>
+            <Chart
+              settings={{
+                width: 380,
+                type: 'donut',
+                series: [74, 225],
+                options: {
+                  colors: ['#009914', '#b99213'],
+                  chart: {
+                    width: 380,
+                    foreColor: '#fff',
+                  },
+                  labels: ['Mobile', 'Desktop'],
+                  responsive: [
+                    {
+                      breakpoint: 480,
+                      options: {
+                        chart: {
+                          width: 200,
+                        },
+                        legend: {
+                          position: 'bottom',
+                        },
                       },
                     },
+                  ],
+                },
+              }}
+            />
+          </li>
+
+          <li className="p-2 rounded shadow-lg">
+            <h2>Users country</h2>
+            <Chart
+              settings={{
+                width: 380,
+                type: 'donut',
+                series: [169, 110, 20],
+                options: {
+                  colors: ['#610099', '#13b9a3', '#bb2d2d'],
+                  chart: {
+                    width: 380,
+                    foreColor: '#fff',
                   },
-                ],
-              },
-            }}
-          />
-        </div>
+                  labels: ['Brazil', 'USA', 'Germany'],
+                  responsive: [
+                    {
+                      breakpoint: 480,
+                      options: {
+                        chart: {
+                          width: 200,
+                        },
+                        legend: {
+                          position: 'bottom',
+                        },
+                      },
+                    },
+                  ],
+                },
+              }}
+            />
+          </li>
+        </ul>
 
         <div className="min-h-[200vh]"></div>
       </div>

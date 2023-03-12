@@ -1,26 +1,21 @@
 import Link from 'next/link'
 import { FiHome, FiSettings, FiLogIn } from 'react-icons/fi'
 import { adminPagesMap } from '@/data/static'
-import MenuItem from './MenuItem'
+import MenuCategory from './MenuCategory'
 
 export default function Navbar() {
   return (
-    <header className="md:min-w-[18rem] relative px-4 py-4 bg-gray-900 shadow-xl z-10">
-      <nav>
+    <header className="h-screen relative px-4 py-4 bg-gray-900 overflow-auto shadow-xl z-10 md:min-w-[18rem]">
+      <nav className="flex flex-col h-full">
         <span className="block mb-4 text-4xl">Logo</span>
 
-        <ul className="flex flex-col gap-2">
-          {adminPagesMap.map((page) => (
-            <MenuItem
-              key={page.label}
-              label={page.label}
-              path={page.path}
-              icon={page.icon}
-            />
+        <ul className="flex flex-col gap-2 mb-6">
+          {adminPagesMap.categories.map((category) => (
+            <MenuCategory key={category} category={category} />
           ))}
         </ul>
 
-        <ul className="flex gap-4 absolute bottom-2 right-4">
+        <ul className="flex gap-4 mt-auto">
           <li>
             <Link
               href="/"
@@ -41,7 +36,7 @@ export default function Navbar() {
 
           <li>
             <Link
-              href="/signout"
+              href="/user/signout"
               className="transition-colors text-gray-500 hover:text-white focus:text-white"
             >
               <FiLogIn size={24} />

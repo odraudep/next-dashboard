@@ -26,7 +26,7 @@ export default function Dropdown({
     },
     {
       label: 'Sign Out',
-      path: '/signout',
+      path: '/user/signout',
     },
   ],
 }: DropdownProps) {
